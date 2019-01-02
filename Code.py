@@ -19,7 +19,7 @@ def generate(amount):
         code += str(r.randint(1, 9))
 
     for i in range(len(code)):
-        unknown.append("*" * i + code[i] + "*" * (len(code) - i - 1))
+        unknown.append("*"*i + code[i] + "*"*(len(code) - i - 1))
 
 
 def get_code_digit():
@@ -51,7 +51,7 @@ def ending(player):
     input("\nWciśnij ENTER, aby kontunuować...")
     while True:
         os.system('cls')
-        print("-" * 20)
+        print("-"*20)
         Addons.slow_print("""Jesteś w pokoju przeznaczenia\n
 Twoje serce zaczyna bić szybciej. Przed Tobą znajdują się duże straszliwe wrota.
 Wygląda na to że, aby je otworzyć należy podać odpowiedni kod.""", sec, newline=False)
@@ -91,7 +91,7 @@ def guess(player):
         Addons.slow_print(boss_pict, 0.0001)
         input("\nWciśnij ENTER, aby kontunuować...")
 
-        player.fight(boss_name, int(score_multiplier * player.max_hp / 9) * 10)
+        player.fight(boss_name, int(score_multiplier*player.max_hp/9)*10)
         if not player.dead:
             Addons.slow_print("Teraz już nic nie stoi na przeszkodzie, aby opuścić to miejsce.\nOdzyskałeś wolność...",
                               0.05)
@@ -103,7 +103,7 @@ def guess(player):
         return 1
 
     else:
-        Addons.slow_print("\nZły kod.\nZ podłogi wysuwają się kłujące kolce.\n", 0.05, newline=False)
+        Addons.slow_print("\nZły kod.\nZ podłogi wysuwają się kłujące kolce.\n", 0.05, newline = False)
         player.update_hp(10)
         if not player.dead:
             input("\nWciśnij ENTER, aby kontunuować...")
